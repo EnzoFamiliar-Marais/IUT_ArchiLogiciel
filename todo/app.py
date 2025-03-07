@@ -1,2 +1,4 @@
 from flask import Flask
-app = Flask ( __name__ )
+from flask_cors import CORS
+app = Flask(__name__)
+cors = CORS(app, resources={r"/todo/api/v1.0/*": {"origins": "*"}})
